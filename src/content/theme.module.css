@@ -20,47 +20,51 @@
 }
 
 .bold {
-    font-weight: 700
+  font-weight: 700;
 }
 
 .italic {
-    font-style: italic
+  font-style: italic;
 }
 
 .underline {
-    text-decoration: underline
+  text-decoration: underline;
 }
 
 .strikethrough {
-    text-decoration: line-through
+  text-decoration: line-through;
 }
 
 .underlineStrikethrough {
-    text-decoration: underline line-through
+  text-decoration: underline line-through;
 }
 
 .subscript {
-    font-size: .8em;
-    vertical-align: sub!important
+  font-size: 0.8em;
+  vertical-align: sub !important;
 }
 
 .superscript {
-    font-size: .8em;
-    vertical-align: super
+  font-size: 0.8em;
+  vertical-align: super;
 }
 
 .code {
-    background-color: var(--baseBg);
-    padding: 1px .25rem;
-    font-family: var(--font-mono);
-    font-size: 94%
+  background-color: var(--baseBg);
+  padding: 1px 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 94%;
 }
 
 .nestedListItem {
-  list-style:none;
+  list-style: none;
 }
 
-.admonitionDanger, .admonitionInfo, .admonitionNote, .admonitionTip, .admonitionCaution {
+.admonitionDanger,
+.admonitionInfo,
+.admonitionNote,
+.admonitionTip,
+.admonitionCaution {
   padding: var(--spacing-2);
   margin-top: var(--spacing-2);
   margin-bottom: var(--spacing-2);

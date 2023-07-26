@@ -4,5 +4,5 @@ import extend from 'postcss-extend'
 import mixins from 'postcss-mixins'
 
 export default {
-  plugins: [ autoprefixer, mixins, extend, nesting ]
+  plugins: [autoprefixer, mixins, extend, nesting]
 }

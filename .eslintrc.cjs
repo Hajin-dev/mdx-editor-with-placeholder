@@ -4,13 +4,13 @@ module.exports = {
   parserOptions: {
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json'],
-    sourceType: 'module',
+    sourceType: 'module'
   },
   plugins: ['react', '@typescript-eslint', 'json', 'html'],
   env: {
     browser: true,
     es2021: true,
-    node: true,
+    node: true
   },
   extends: [
     'plugin:@typescript-eslint/recommended',
@@ -18,11 +18,11 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'prettier',
-    'plugin:prettier/recommended',
+    'plugin:prettier/recommended'
   ],
   overrides: [
     {
-      "files": ["./postcss.config.js", "./vite.config.ts", "./tailwind.config.ts"],
+      files: ['./postcss.config.js', './vite.config.ts', './tailwind.config.ts'],
       parserOptions: { project: null }
     }
   ],
@@ -39,22 +39,22 @@ module.exports = {
       {
         argsIgnorePattern: '^_',
         varsIgnorePattern: '^_',
-        caughtErrorsIgnorePattern: '^_',
-      },
+        caughtErrorsIgnorePattern: '^_'
+      }
     ],
     '@typescript-eslint/no-misused-promises': [
       2,
       {
         checksVoidReturn: {
-          attributes: false,
-        },
-      },
-    ],
+          attributes: false
+        }
+      }
+    ]
   },
   settings: {
     react: {
-      version: 'detect', // React version. "detect" automatically picks the version you have installed.
-    },
+      version: 'detect' // React version. "detect" automatically picks the version you have installed.
+    }
   },
-  ignorePatterns: ['.eslintrc.cjs'],
+  ignorePatterns: ['.eslintrc.cjs']
 }

@@ -3,7 +3,6 @@
 @import url('@radix-ui/colors/sage.css');
 @import url('@radix-ui/colors/sageDark.css');
 
-
 .customEditorRoot {
   --accentBase: var(--green1);
   --accentBgSubtle: var(--green2);

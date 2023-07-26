@@ -1,10 +1,7 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "lib": [
-      "dom",
-      "esnext"
-    ],
+    "lib": ["dom", "esnext"],
     "jsx": "react",
     "module": "esnext",
     "moduleResolution": "node",
@@ -13,23 +10,13 @@
     "strict": true,
     "skipLibCheck": true,
     "rootDir": "./src",
-    "typeRoots": [
-      "./node_modules/@types",
-      "./src/@types",
-      "./node_modules"
-    ],
-    "types": [
-      "vite/client",
-      "@testing-library/jest-dom",
-      "svgr"
-    ],
+    "typeRoots": ["./node_modules/@types", "./src/@types", "./node_modules"],
+    "types": ["vite/client", "@testing-library/jest-dom", "svgr"],
     "plugins": [
       {
         "name": "typescript-plugin-css-modules"
       }
     ]
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }

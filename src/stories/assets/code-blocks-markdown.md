@@ -1,6 +1,7 @@
 # Block of code:
 
 ## JS
+
 ```js
 export default function App() {
   return <h1>Hello world from a markdown</h1>
@@ -11,7 +12,7 @@ export default function App() {
 
 ```css
 body {
-    color: red;
+  color: red;
 }
 ```
 
@@ -38,7 +39,7 @@ export default function App() {
         <div
           style={{
             backgroundColor: user.bgColor,
-            padding: '1rem 0.5rem',
+            padding: '1rem 0.5rem'
           }}
         >
           <h4>{user.name}</h4>

@@ -4,11 +4,11 @@ title: Hello World
 
 Some informative text
 
-[A link](https://google.com/ "Googl Title")
+[A link](https://google.com/ 'Googl Title')
 
 horizontal rule
 
----------------
+---
 
 Block of code:
 
@@ -18,28 +18,28 @@ export default function App() {
 }
 ```
 
-# Heading 1 
+# Heading 1
 
- - bullet 1 *italic*
- - bullet 2, **bold** some more text
-    - nested bullet
-    - nested bullet 2
+- bullet 1 _italic_
+- bullet 2, **bold** some more text
+  - nested bullet
+  - nested bullet 2
 
 1. Ordered bullet 1
 2. Ordered bullet 2
 
-World Some **nested *formatting* text some more <u>un *derl* ine</u>**.
+World Some **nested _formatting_ text some more <u>un _derl_ ine</u>**.
 
-And *some italic with nested **bold** text*.
+And _some italic with nested **bold** text_.
 
-> Quote with **bold** and *italic* text.
+> Quote with **bold** and _italic_ text.
 > and some more.
 
 ## Heading 2
 
 `inlineVariable` code
 
-[A link](https://google.com/ "Googl Title")
+[A link](https://google.com/ 'Googl Title')
 
 Image:
 

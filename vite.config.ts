@@ -7,7 +7,7 @@ import svgr from 'vite-plugin-svgr'
 
 const ext = {
   cjs: 'cjs',
-  es: 'js',
+  es: 'js'
 } as const
 
 const packageJson = JSON.parse(readFileSync('./package.json', 'utf-8')) as {
@@ -20,7 +20,7 @@ const IN_LADLE = process.env['LADLE']
 const externalPackages = [
   ...Object.keys(packageJson.dependencies),
   ...Object.keys(packageJson.peerDependencies),
-  /@lexical\/react\/.*/,
+  /@lexical\/react\/.*/
   // '@lexical/react/LexicalHorizontalRuleNode',
   // '@lexical/react/LexicalHorizontalRulePlugin',
   // '@lexical/react/LexicalComposerContext',
@@ -29,25 +29,25 @@ const externalPackages = [
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    react(IN_LADLE ? {} : { jsxRuntime: 'classic' } as const),
+    react(IN_LADLE ? {} : ({ jsxRuntime: 'classic' } as const)),
     dts({
       rollupTypes: true,
       compilerOptions: {
-        skipLibCheck: true,
-      },
+        skipLibCheck: true
+      }
     }),
     svgr({
       exportAsDefault: true,
       svgrOptions: {
         svgo: true,
-        replaceAttrValues: { 'black': 'currentColor' }
+        replaceAttrValues: { black: 'currentColor' }
       }
-    }),
+    })
   ],
   server: {
     proxy: {
       '/uploads': 'http://localhost:65432'
-    },
+    }
   },
   build: {
     minify: 'terser',
@@ -55,16 +55,16 @@ export default defineConfig({
     lib: {
       entry: ['src/index.ts'],
       formats: ['es', 'cjs'],
-      fileName: (format) => `index.${ext[format as 'cjs' | 'es']}`,
+      fileName: (format) => `index.${ext[format as 'cjs' | 'es']}`
     },
     rollupOptions: {
-      external: externalPackages,
-    },
+      external: externalPackages
+    }
   },
   test: {
     include: ['src/test/**/*.test.{ts,tsx}'],
     environment: 'jsdom',
-    setupFiles: ['src/test/setup.ts'],
+    setupFiles: ['src/test/setup.ts']
   },
   css: {
     modules: {

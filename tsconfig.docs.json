@@ -1,7 +1,5 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {},
-  "files": [
-    "dist/index.d.ts"
-  ]
+  "files": ["dist/index.d.ts"]
 }

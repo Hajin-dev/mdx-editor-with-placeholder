@@ -26,7 +26,7 @@
   "scripts": {
     "build": "vite build",
     "build:docs:api": "./scripts/build_docs_api.sh",
-    "start": "LADLE=true ladle dev",
+    "start": "ladle dev",
     "dev": "LADLE=true ladle dev",
     "typecheck": "tsc --noEmit",
     "lint": "eslint src --ext .ts,.tsx",
