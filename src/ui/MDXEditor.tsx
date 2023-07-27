@@ -160,6 +160,10 @@ export interface MDXEditorProps {
    */
   imageUploadHandler?: (image: File) => Promise<string>
   customLeafDirectiveEditors?: CustomLeafDirectiveEditor<any>[]
+  /**
+   * Add Place Holder on Lexical.RichTextPlugin
+   */
+  placeHolder?: string | null | JSX.Element
 }
 
 const LazyFrontmatterEditor = React.lazy(() =>
@@ -318,6 +322,7 @@ export const MDXEditor = React.forwardRef<MDXEditorMethods, MDXEditorProps>(
       linkAutocompleteSuggestions,
       imageAutoCompleteSuggestions,
       className,
+      placeHolder,
       contentEditableClassName,
       toolbarComponents = defaultToolbarComponents,
       imageUploadHandler,
@@ -392,7 +397,7 @@ export const MDXEditor = React.forwardRef<MDXEditorMethods, MDXEditorProps>(
             <ViewModeToggler>
               <RichTextPlugin
                 contentEditable={<ContentEditable className={classNames(styles.contentEditable, contentEditableClassName)} />}
-                placeholder={<div></div>}
+                placeholder={placeHolder ? typeof placeHolder === 'string' ? <div>{placeHolder}</div> : placeHolder : null}
                 ErrorBoundary={LexicalErrorBoundary}
               />
             </ViewModeToggler>
